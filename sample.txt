@@ -1,0 +1,9 @@
+Hello
+I am writing in the opened file
+This is some new lines i am adding to the sample.txt file
+Now as the file is in append mode hope it doesn't erase the previous ones
+
+Can I do editing and reading files in one go??
+
+
+Can I do editing and reading files in one go??
