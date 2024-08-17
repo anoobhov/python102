@@ -11,6 +11,11 @@ class Userserializer(serializers.ModelSerializer):
 
 
 class Todoserializer(serializers.ModelSerializer):
+    user = Userserializer(read_only=True)
+
+
+
     class Meta:
         model = Todo
         fields = ["name","description","user","priority"]
+

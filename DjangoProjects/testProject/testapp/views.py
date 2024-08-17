@@ -61,12 +61,13 @@ def add_todo(request):
             "message":e.__str__()
         },status=400)
 
+
 def get_todo(request):
     try:
-        todo_id=int(request.Get.get("id"))
+        todo_id=int(request.GET.get("id"))
         todo=Todo.objects.get(pk=todo_id)
         return JsonResponse(Todoserializer(todo).data,status=200)
     except Exception as e:
         return JsonResponse({
-            "message":e.__str__()
-        },status=404)
+            "message": e.__str__()
+        }, status=404)
